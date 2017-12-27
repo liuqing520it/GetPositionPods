@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GetPositionPods_Example' do
+  pod 'GetPositionPods', :path => '../'
+
+  target 'GetPositionPods_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
