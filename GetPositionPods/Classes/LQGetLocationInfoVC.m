@@ -273,7 +273,12 @@
 
 - (UIImageView *)centerMaker{
     if (!_centerMaker) {
-        UIImage *image = [UIImage imageNamed:@"AMap3D.bundle/redPin_lift"];
+        
+        NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+        NSString *imagePath = [currentBundle pathForResource:@"redPin_lift.png" ofType:nil
+                           inDirectory:@"GetPositionPods.bundle"];
+        
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         _centerMaker = [[UIImageView alloc]initWithImage:image];
         [_centerMaker setFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
         _centerMaker.center =  CGPointMake(SCREEN_WIDTH / 2, CGRectGetHeight(_mapView.bounds)*0.5f);
@@ -287,8 +292,16 @@
         _locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _locationButton.frame = CGRectMake(CGRectGetWidth(self.mapView.bounds)-50, CGRectGetHeight(self.mapView.bounds)-50, 40, 40);
         _locationButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-        [_locationButton setImage:[UIImage imageNamed:@"AMap3D.bundle/gpsnormal"] forState:UIControlStateNormal];
-        [_locationButton setImage:[UIImage imageNamed:@"AMap3D.bundle/gpsselected"] forState:UIControlStateSelected];
+        NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+        NSString *imagePathNormal = [currentBundle pathForResource:@"gpsnormal@2x.png"
+                                                            ofType:nil
+                                                 inDirectory:@"GetPositionPods.bundle"];
+        NSString *imagePathSelected = [currentBundle pathForResource:@"gpsselected@2x.png"
+                                                              ofType:nil
+                                                       inDirectory:@"GetPositionPods.bundle"];
+        
+        [_locationButton setImage:[UIImage imageWithContentsOfFile:imagePathNormal] forState:UIControlStateNormal];
+        [_locationButton setImage:[UIImage imageWithContentsOfFile:imagePathSelected] forState:UIControlStateSelected];
         [_locationButton addTarget:self action:@selector(actionLocation) forControlEvents:UIControlEventTouchUpInside];
     }
     return _locationButton;

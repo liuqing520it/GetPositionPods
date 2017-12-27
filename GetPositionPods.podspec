@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GetPositionPods'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'GetPositionPods.'
 
   s.description      = <<-DESC
@@ -19,9 +19,9 @@ TODO: GetPositionPods.获取当前位置信息
 
   s.source_files = 'GetPositionPods/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'GetPositionPods' => ['GetPositionPods/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'GetPositionPods' => ['GetPositionPods/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
