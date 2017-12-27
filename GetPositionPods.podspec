@@ -10,7 +10,7 @@ TODO: GetPositionPods.获取当前位置信息
                        DESC
 
   s.homepage         = 'https://github.com/liuqing520it/GetPositionPods'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liuqing520it' => '330663384@qq.com' }
   s.source           = { :git => 'https://github.com/liuqing520it/GetPositionPods.git', :tag => s.version.to_s }
