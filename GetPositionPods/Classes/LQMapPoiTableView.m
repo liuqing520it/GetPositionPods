@@ -52,7 +52,11 @@
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.refreshControl = self.refreshControl;
+        if (@available(iOS 10.0, *)) {
+            _tableView.refreshControl = self.refreshControl;
+        } else {
+            // Fallback on earlier versions
+        }
         __weak typeof (self)weakSelf = self;
         [_tableView addInfiniteScrollingWithActionHandler:^{
             [weakSelf loadMoreData];
@@ -191,7 +195,11 @@
             [self.dataSource removeObjectsInRange:NSMakeRange(1, self.dataSource.count-1)];
         }
         ///下拉刷新停止
-        [self.tableView.refreshControl endRefreshing];
+        if (@available(iOS 10.0, *)) {
+            [self.tableView.refreshControl endRefreshing];
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
   
