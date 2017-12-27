@@ -1,0 +1,16 @@
+PODS:
+  - GetPositionPods (0.1.0)
+
+DEPENDENCIES:
+  - GetPositionPods (from `../`)
+
+EXTERNAL SOURCES:
+  GetPositionPods:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GetPositionPods: 67901660ebee0d8259261a6a68b3e409a2f29d77
+
+PODFILE CHECKSUM: 5f4f784c975a55de1c1379cf7cfbb9bee0865b5c
+
+COCOAPODS: 1.4.0.rc.1

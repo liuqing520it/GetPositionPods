@@ -1,0 +1,6 @@
+framework module GetPositionPods {
+  umbrella header "GetPositionPods-umbrella.h"
+
+  export *
+  module * { export * }
+}
