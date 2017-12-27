@@ -1,5 +1,12 @@
 PODS:
-  - GetPositionPods (0.1.0)
+  - AMap3DMap (5.6.0):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.4.2)
+  - AMapSearch (5.5.0):
+    - AMapFoundation (~> 1.4)
+  - GetPositionPods (0.1.0):
+    - AMap3DMap
+    - AMapSearch
 
 DEPENDENCIES:
   - GetPositionPods (from `../`)
@@ -9,8 +16,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GetPositionPods: 67901660ebee0d8259261a6a68b3e409a2f29d77
+  AMap3DMap: 2ac4f9ad7f2f8b015013d8d282c55882bcd68dc9
+  AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
+  AMapSearch: dc9958acfb61b58dcbce79736bf14a39dde7506f
+  GetPositionPods: 156563ad8aabfd9a156f69d8669236510f02b827
 
-PODFILE CHECKSUM: 5f4f784c975a55de1c1379cf7cfbb9bee0865b5c
+PODFILE CHECKSUM: 5942c918dd57a7f0dcb2d476ea34e330188dfa43
 
 COCOAPODS: 1.4.0.rc.1

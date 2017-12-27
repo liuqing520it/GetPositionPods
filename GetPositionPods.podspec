@@ -15,7 +15,7 @@ TODO: GetPositionPods.获取当前位置信息
   s.author           = { 'liuqing520it' => '330663384@qq.com' }
   s.source           = { :git => 'https://github.com/liuqing520it/GetPositionPods.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'GetPositionPods/Classes/**/*'
   
