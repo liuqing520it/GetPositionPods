@@ -13,6 +13,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 
 ## Requirements
+* info.plist must add some keys : Privacy - Location When In Use Usage Description and Privacy - Location Always and When In Use Usage Description
+
 
 ## Installation
 
